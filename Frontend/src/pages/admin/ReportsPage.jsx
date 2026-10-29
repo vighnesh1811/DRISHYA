@@ -1,0 +1,7 @@
+import { useEffect, useState } from 'react';
+import { phase5Api } from '../../services/api';
+export default function ReportsPage() {
+  const [data, setData] = useState(null);
+  useEffect(() => { phase5Api.reports().then(setData).catch(() => {}); }, []);
+  return <section className="admin-control-page"><div className="container"><div className="admin-command-header"><div><p className="eyebrow">DRISHYA / CONTROL ROOM — 05</p><h1>Business <em>reports.</em></h1></div><span className="dashboard-date">PERFORMANCE / LIVE</span></div><div className="stats-grid admin-stats"><div className="stat-card stat-card-1"><span className="stat-index">01</span><strong>{data?.totals?.totalBookings || 0}</strong><span>Total bookings</span></div><div className="stat-card stat-card-2"><span className="stat-index">02</span><strong>₹{Number(data?.totals?.rentalValue || 0).toLocaleString('en-IN')}</strong><span>Rental value</span></div><div className="stat-card stat-card-3"><span className="stat-index">03</span><strong>₹{Number(data?.totals?.depositsHeld || 0).toLocaleString('en-IN')}</strong><span>Deposits held</span></div></div><h2 className="admin-section-title report-title">Popular equipment</h2><div className="admin-list">{data?.popular?.map((item, index) => <div className="admin-list-item" key={item.name}><span className="admin-list-index">0{index + 1}</span><strong>{item.name}</strong><span>{item.unitsRented} units rented</span></div>)}</div></div></section>;
+}

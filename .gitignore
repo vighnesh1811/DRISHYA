@@ -1,0 +1,20 @@
+
+# Dependencies and build files
+node_modules/
+dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Ignore uploaded files but preserve .gitkeep
+Backend/uploads/*
+!Backend/uploads/.gitkeep
+
+# Generated test reports
+Frontend/playwright-report/
+Frontend/test-results/

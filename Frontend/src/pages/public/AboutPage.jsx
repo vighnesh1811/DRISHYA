@@ -1,0 +1,7 @@
+export default function AboutPage() {
+  return (
+    <section className="public-editorial-page">
+      <div className="container"><p className="eyebrow">DRISHYA / 08 — About</p><div className="public-hero-copy"><h1>Built for <em>storytellers.</em></h1><p className="lead muted-copy">DRISHYA helps creative teams access professional equipment without compromise. Our collection is carefully maintained, straightforward to book, and ready for your next frame.</p></div><div className="public-feature-grid"><div className="public-feature-image"><img src="/images/filmmaker.jpg" alt="Filmmaker working with a professional camera on set" /></div><div className="public-feature-copy"><span className="public-index">01 / OUR APPROACH</span><h2>Good tools should make the work <em>disappear.</em></h2><p className="muted-copy">We keep the process considered and the equipment dependable, so your attention stays where it belongs: on the image, the performance and the story.</p></div></div><div className="public-values"><article><span>01</span><h2>Considered<br /><em>collection.</em></h2><p className="muted-copy">The right cameras, lenses, lighting and sound for the work ahead.</p></article><article><span>02</span><h2>Ready when<br /><em>you are.</em></h2><p className="muted-copy">Every piece is checked and cared for before it reaches your set.</p></article><article><span>03</span><h2>Human<br /><em>service.</em></h2><p className="muted-copy">A real team to help you choose well and move with confidence.</p></article></div></div>
+    </section>
+  );
+}
